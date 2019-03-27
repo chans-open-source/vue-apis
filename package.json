@@ -1,6 +1,6 @@
 {
   "name": "vue-apis",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "集成axios的vue插件",
   "main": "dist/index.js",
   "author": "Changeden",
