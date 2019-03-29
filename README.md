@@ -52,7 +52,7 @@ showLoading | function | undefined | show loading layout function
 hideLoading | function | undefined | hide loading layout function
 
 ### Example
-main.js
+* main.js
 ```js
 import Vue from 'vue'
 import VueApis from 'vue-apis'
@@ -68,7 +68,7 @@ Vue.use(VueApis, {
   }
 })
 ```
-api.js
+* api.js
 ```js
 import { ApiOptions, ApiMethod } from 'vue-apis'
 
@@ -89,7 +89,7 @@ const $api = {
 
 export default $api
 ```
-home.vue
+* home.vue
 ```html
 <template>
   <div v-html="readme"></div>
