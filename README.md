@@ -1,24 +1,42 @@
 # vue-apis
+[
 ![NPM version](https://img.shields.io/npm/v/vue-apis.svg)
 ![NPM download](https://img.shields.io/npm/dm/vue-apis.svg)
 ![NPM download](https://img.shields.io/npm/dw/vue-apis.svg)
+](https://www.npmjs.com/package/vue-apis)
+[
 ![npm](https://img.shields.io/npm/l/vue-apis.svg)
+](https://github.com/ChangedenCZD/vue-apis/blob/master/LICENSE)
 
-
+[
 ![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/vue-apis.svg)
 ![GitHub stars](https://img.shields.io/github/stars/ChangedenCZD/vue-apis.svg)
 ![GitHub forks](https://img.shields.io/github/forks/ChangedenCZD/vue-apis.svg)
 ![GitHub issues](https://img.shields.io/github/issues/ChangedenCZD/vue-apis.svg)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ChangedenCZD/vue-apis.svg)
+](https://github.com/ChangedenCZD/vue-apis)
 
-## Installation
+
+* A vue plug-in integrated with axios. Build the API using chain programming and return the request instance as a Promise. A nice simplification of how apis are built, and how they are referenced.
+* 一个集成了axios的vue插件。使用链式编程方式构建api，并以Promise返回请求实例。很好地简化了api的构建方式，和引用方式（通过this.$apis.apiName进行引用）。
+
+## Browser Support
+
+![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
+--- | --- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
+
+[![Browser Matrix](https://saucelabs.com/open_sauce/build_matrix/axios.svg)](https://saucelabs.com/u/axios)
+
+## Installing
 ```
 npm install vue-apis
 // or
 yarn add vue-apis
 ```
 
-### Usage
+## Usage
+### Import
 ```
 import Vue from 'vue'
 import VueApis from 'vue-apis'
@@ -91,6 +109,6 @@ home.vue
 </script>
 ```
 
-### Source Code
+## Source Code
 * [Official Demo Source](https://github.com/ChangedenCZD/official-web-for-vue)
 * [Plugin Source](https://github.com/ChangedenCZD/vue-apis)
