@@ -11,11 +11,11 @@
 ](https://github.com/ChangedenCZD/vue-apis/blob/master/LICENSE)
 
 [
-![GitHub watchers](https://img.shields.io/github/watchers/ChangedenCZD/vue-apis.svg)
-![GitHub stars](https://img.shields.io/github/stars/ChangedenCZD/vue-apis.svg)
-![GitHub forks](https://img.shields.io/github/forks/ChangedenCZD/vue-apis.svg)
-![GitHub issues](https://img.shields.io/github/issues/ChangedenCZD/vue-apis.svg)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ChangedenCZD/vue-apis.svg)
+![GitHub watchers](https://img.shields.io/github/watchers/Chans-Open-Source/vue-apis.svg)
+![GitHub stars](https://img.shields.io/github/stars/Chans-Open-Source/vue-apis.svg)
+![GitHub forks](https://img.shields.io/github/forks/Chans-Open-Source/vue-apis.svg)
+![GitHub issues](https://img.shields.io/github/issues/Chans-Open-Source/vue-apis.svg)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Chans-Open-Source/vue-apis.svg)
 ](https://github.com/ChangedenCZD/vue-apis)
 
 
