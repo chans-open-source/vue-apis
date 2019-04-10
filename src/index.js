@@ -24,9 +24,13 @@ const VueApis = {
     }
     $apis['__methods__'] = methods
 
-    Object.keys(methods).forEach(key => ApiOptions.assemble(key, methods[key], token))
+    Object.keys(methods).forEach(key => ApiOptions.assembleFunction(key, methods[key], token))
 
     $apis['__version__'] = version
+
+    if (typeof options['interceptors'] !== 'undefined') {
+      ApiOptions.assembleInterceptors(options['interceptors'])
+    }
 
     Vue.prototype.$apis = $apis
   }

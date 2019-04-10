@@ -30,15 +30,37 @@ const emmit = func => {
   typeof Function[func] === 'function' && Function[func]()
 }
 
+const setInterceptors = interceptors => {
+  if (interceptors) {
+    const request = interceptors['request']
+    const response = interceptors['response']
+
+    if (typeof request === 'function') {
+      axios.interceptors.request.use(request)
+    } else if (typeof request === 'object') {
+      axios.interceptors.request.use(request.then, request.catch)
+    }
+    if (typeof response === 'function') {
+      axios.interceptors.response.use(response)
+    } else if (typeof response === 'object') {
+      axios.interceptors.response.use(response.then, response.catch)
+    }
+  }
+}
+
 export default class Api {
   constructor () {
     this.options = new Options()
   }
 
-  static assemble (k, v, t) {
+  static assembleFunction (k, v, t) {
     if (token === t) {
       Function[k] = v
     }
+  }
+
+  static assembleInterceptors (interceptors) {
+    setInterceptors(interceptors)
   }
 
   // 设置请求Url

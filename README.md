@@ -47,11 +47,31 @@ Vue.use(VueApis, options)
 ```
 
 ### Options
-option key | type | default value | description
----------- | ---- | ------------- | -----------
-apis | object | {} | api set 
-showLoading | function | undefined | show loading layout function
-hideLoading | function | undefined | hide loading layout function
+| option key | type | default value | description |
+| ---------- | ---- | ------------- | ----------- |
+| apis | object | {} | api set | |
+| showLoading | function | undefined | show loading layout function |
+| hideLoading | function | undefined | hide loading layout function |
+| interceptors | [InterceptorObject](#InterceptorObject) | undefined | You can intercept requests or responses before they are handled by then or catch. |
+
+#### InterceptorObject
+| field | type | description |
+| --- | --- | --- |
+| request | [RequestObject](#RequestObject) / Function | When the instance is 'Function', it is a 'then' callback to the interceptor |
+| response | [ResponseObject](#ResponseObject) / Function | When the instance is 'Function', it is a 'then' callback to the interceptor |
+
+##### RequestObject
+| Function | e.g. |
+| --- | --- |
+| then | (config) => { return config; } |
+| catch | (error) => { return Promise.reject(error); } |
+
+
+##### ResponseObject
+| Function | e.g. |
+| --- | --- |
+| then | (response) => { return response; } |
+| catch | (error) => { return Promise.reject(error); } |
 
 ### Example
 * main.js
@@ -67,6 +87,28 @@ Vue.use(VueApis, {
   },
   hideLoading: () => {
     console.log('hideLoading')
+  },
+  interceptors: {
+    request: {
+      then(config) {
+        // Do something before request is sent
+        return config;
+      },
+      catch(error) {
+        // Do something with request error
+        return Promise.reject(error);
+      }
+    },
+    response: {
+      then(response) {
+        // Do something with response data
+        return response;
+      },
+      catch(error) {
+        // Do something with response error
+        return Promise.reject(error);
+      }
+    }
   }
 })
 ```
