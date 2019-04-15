@@ -1,6 +1,6 @@
 {
   "name": "vue-apis",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A vue plug-in integrated with axios. Build the API using chain programming and return the request instance as a Promise. A nice simplification of how apis are built, and how they are referenced.",
   "main": "dist/index.js",
   "author": "Changeden",
@@ -26,12 +26,12 @@
     "webpack-cli": "^3.3.0"
   },
   "bugs": {
-    "url": "https://github.com/ChangedenCZD/vue-apis/issues"
+    "url": "https://github.com/Chans-Open-Source/vue-apis/issues"
   },
-  "homepage": "https://github.com/ChangedenCZD/vue-apis#README",
+  "homepage": "https://github.com/Chans-Open-Source/vue-apis",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChangedenCZD/vue-apis.git"
+    "url": "git+https://github.com/Chans-Open-Source/vue-apis.git"
   },
   "keywords": [
     "vue",

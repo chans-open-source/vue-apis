@@ -8,7 +8,7 @@
 ](https://www.npmjs.com/package/vue-apis)
 [
 ![npm](https://img.shields.io/npm/l/vue-apis.svg)
-](https://github.com/ChangedenCZD/vue-apis/blob/master/LICENSE)
+](https://github.com/Chans-Open-Source/vue-apis/blob/master/LICENSE)
 
 [
 ![GitHub watchers](https://img.shields.io/github/watchers/Chans-Open-Source/vue-apis.svg)
@@ -16,7 +16,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Chans-Open-Source/vue-apis.svg)
 ![GitHub issues](https://img.shields.io/github/issues/Chans-Open-Source/vue-apis.svg)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Chans-Open-Source/vue-apis.svg)
-](https://github.com/ChangedenCZD/vue-apis)
+](https://github.com/Chans-Open-Source/vue-apis)
 
 
 * A vue plug-in integrated with axios. Build the API using chain programming and return the request instance as a Promise. A nice simplification of how apis are built, and how they are referenced.
@@ -119,7 +119,7 @@ import { ApiOptions, ApiMethod } from 'vue-apis'
 const $api = {
   readme () {
     return new ApiOptions()
-    .setUrl(`https://raw.githubusercontent.com/ChangedenCZD/vue-apis/master/README.md`)
+    .setUrl(`https://raw.githubusercontent.com/Chans-Open-Source/vue-apis/master/README.md`)
     .setMethod(ApiMethod.GET)
     .setParams({
       timestamp: Date.now()
@@ -154,5 +154,5 @@ export default $api
 ```
 
 ## Source Code
-* [Official Demo Source](https://github.com/ChangedenCZD/official-web-for-vue)
-* [Plugin Source](https://github.com/ChangedenCZD/vue-apis)
+* [Official Demo Source](https://github.com/Chans-Open-Source/official-web-for-vue)
+* [Plugin Source](https://github.com/Chans-Open-Source/vue-apis)
