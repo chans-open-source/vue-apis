@@ -150,6 +150,28 @@ export default $api
 </script>
 ```
 
+#### FormData
+* Api
+```js
+const $api = {
+  formDataRequest (formData) {
+    return new ApiOptions()
+    .setUrl(URL)
+    .setMethod(ApiMethod.POST)
+    .setData(formData)
+    .request()
+  }
+}
+```
+* Create FormData Instance
+```js
+const formData = new window.FormData()
+formData.append(key, value)
+
+// Request
+this.$apis.formDataRequest(formData)
+```
+
 ## Source Code
 * [Official Demo Source](https://github.com/Chans-Open-Source/official-web-for-vue)
 * [Plugin Source](https://github.com/Chans-Open-Source/vue-apis)
