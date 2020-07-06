@@ -43,6 +43,16 @@ import VueApis from 'vue-apis'
 Vue.use(VueApis, options)
 ```
 
+### Api
+| function | example | argument | description |
+| ---------- | ---- | ------------- | ----------- |
+| setUrl | setUrl('https://baidu.com') | (url: String) | set request url address |
+| setData | setData({ a: 1}) | (data: Object) | set post body object |
+| setParams | setParams({ t: Date.now() }) | (params: Object) | set request url query |
+| setHeaders | setHeaders({ 'content-type': 'application/json' }) | (headers: Object) | set request headers |
+| setTimeout | setTimeout(10000) | (timeout: Number) | set request timeout |
+| setCustomOptions | setCustomOptions({ responseType: 'stream' }) | (options: Object, clear: boolean) | set custom options |
+
 ### Options
 | option key | type | default value | description |
 | ---------- | ---- | ------------- | ----------- |
@@ -170,6 +180,27 @@ formData.append(key, value)
 
 // Request
 this.$apis.formDataRequest(formData)
+```
+
+#### Custom Options
+```js
+const $api = {
+  formDataRequest (formData) {
+    return new ApiOptions()
+    .setUrl(URL)
+    .setMethod(ApiMethod.POST)
+    .setData(formData)
+    .setCustomOptions({
+      url: `https://baidu.com`, // invalid
+      data: {}, // invalid
+      params: {}, // invalid
+      headers: {}, // invalid
+      method: {}, // invalid
+      responseType: 'stream' // valid
+    }, /* is clear all custom options at first */ false)
+    .request()
+  }
+}
 ```
 
 ## Source Code

@@ -1,6 +1,6 @@
 {
   "name": "vue-apis",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "A vue plug-in integrated with axios. Build the API using chain programming and return the request instance as a Promise. A nice simplification of how apis are built, and how they are referenced.",
   "main": "dist/index.js",
   "author": "Changeden",

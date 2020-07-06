@@ -1,10 +1,10 @@
 // 请求参数
 import axios from 'axios'
 import Method from './method'
-import { token, showLoading, hideLoading } from './key'
+import {token, showLoading, hideLoading} from './key'
 
 class Options {
-  constructor () {
+  constructor() {
     // 请求Url
     this.url = ''
     // 请求方法，默认GET
@@ -49,69 +49,84 @@ const setInterceptors = interceptors => {
 }
 
 export default class Api {
-  constructor () {
+  constructor() {
     this.options = new Options()
+    this.customOptions = {}
   }
 
-  static assembleFunction (k, v, t) {
+  static assembleFunction(k, v, t) {
     if (token === t) {
       Function[k] = v
     }
   }
 
-  static assembleInterceptors (interceptors) {
+  static assembleInterceptors(interceptors) {
     setInterceptors(interceptors)
   }
 
   // 设置请求Url
-  setUrl (url) {
+  setUrl(url) {
     this.options.url = url
     return this
   }
 
   // 设置请求方法，默认GET
-  setMethod (method = Method.GET) {
+  setMethod(method = Method.GET) {
     this.options.method = method
     return this
   }
 
   // 设置请求体
-  setData (data) {
+  setData(data) {
     this.options.data = data
     return this
   }
 
   // 设置请求Url中的参数
-  setParams (params) {
+  setParams(params) {
     this.options.params = params
     return this
   }
 
   // 设置请求超时
-  setTimeout (timeout) {
+  setTimeout(timeout) {
     this.options.timeout = timeout
     return this
   }
 
   // 设置请求最大长度
-  setMaxContentLength (maxContentLength) {
+  setMaxContentLength(maxContentLength) {
     this.options.maxContentLength = maxContentLength
     return this
   }
 
   // 设置请求头部
-  setHeaders (headers) {
+  setHeaders(headers) {
     this.options.headers = headers
     return this
   }
 
-  setSilence (isSilence) {
+  setSilence(isSilence) {
     this.isSilence = typeof isSilence === 'boolean' ? isSilence : false
     return this
   }
 
+  // 设置自定义配置信息
+  setCustomOptions(options = {}, clear = false) {
+    // 有效的自定义配置
+    if (typeof options === 'object' && Object.keys(options).length > 0) {
+      const customOptions = (typeof clear === 'boolean' && clear) ? {} : this.customOptions
+      Object.keys(options).forEach(key => {
+        if (!/(url|data|headers|params|method)/.test(key)) {
+          customOptions[key] = options[key]
+        }
+      })
+      this.customOptions = customOptions
+    }
+  }
+
   // 执行接口请求
-  request () {
+  request() {
     const self = this
     const options = self.options
     const isSilence = self.isSilence
